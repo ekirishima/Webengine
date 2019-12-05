@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap'); * {
+    border: 0;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+a {
+    text-decoration: none;
+}
+
+button, input {
+    border: none;
+    outline: none;
+}
+
+html, body {
+    background: #fcfbff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.header .logotype {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: black;
+    margin-top: 5px;
+    width: 200px;
+}
+
+.header {
+    margin-top: 120px;
+    display: flex;
+}
+
+.header .phone {
+    width: 195px;
+    height: 41px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.01);
+    border-radius: 8px;
+    text-align: center;
+    line-height: 41px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.header .menu a {
+    font-size: 15px;
+    color: #000000;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+.header .menu a:hover, .header .phone:hover, .header .logotype:hover, .footer a:hover {
+    color: #FE7D70;
+}
+
+.header .menu {
+    margin-top: 10px;
+    margin-right: 20px;
+    width: 610px;
+    text-align: right;
+}
+
+#app {
+    background: #FFFFFF;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.01);
+    min-height: 300px;
+    overflow: hidden;
+}
+
+.footer a {
+    font-weight: 500;
+    color: gray;
+    font-size: 13px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+[data-page="loading"] {
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    line-height: 300px;
+}
+
+.btn {
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin-right: 10px;
+    display: inline-block;
+    background: black;
+    color: white;
+    font-size: 15px;
+}
+
+.btn-secondary {
+    color: black;
+    background: linear-gradient(90deg, #F7F9FE 0%, #F7F9FE 100%);
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-main {
+    background: linear-gradient(90deg, #FE7D70 0%, #F89B58 100%);
+    color: white;
+}
+
+[data-page="main"] .title {
+    font-size: 24px;
+    color: #000000;
+    line-height: 28px;
+}
+
+[data-page="main"] .description {
+    font-size: 18px;
+    line-height: 29px;
+    width: 410px;
+    color: #6A6A6A;
+    margin: 30px 0;
+}
+
+[data-page="main"] {
+    position: relative;
+    padding: 120px 40px;
+}
+
+[data-page="main"] .right {
+    position: absolute;
+    right: 80px;
+    top: 80px;
+    background: linear-gradient(90deg, #FE7D70 0%, #F89B58 100%);
+    color: white;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 300px;
+    font-size: 100px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+}
+
+[data-page="portfolio"] a {
+    width: 337px;
+    overflow: hidden;
+    display: inline-block;
+    height: 200px;
+    margin-bottom: -4px;
+    margin-right: -4px;
+    opacity: 0.7;
+}
+
+[data-page="portfolio"] a:hover {
+    opacity: 1;
+}
+
+[data-page="portfolio"] {
+    height: 600px;
+    overflow: hidden scroll;
+}
+
+[data-page="shop"] .item {
+    display: flex;
+    background: #fcfbff;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+[data-page="shop"] .item .image {
+    width: 300px;
+}
+
+[data-page="shop"] .info {
+    padding: 20px;
+    color: black;
+}
+
+[data-page="shop"] {
+    padding: 20px;
+}
+
+[data-page="shop"] .info .title {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+[data-page="shop"] .info .desc {
+    font-size: 14px;
+    color: #929292;
+    margin: 20px 0;
+    width: 500px;
+}
+
+[data-page="shop"] .item:last-child {
+    margin-bottom: 0px;
+}
+
+.flex {
+    display: flex;
+}
+
+[data-page="calc"] {
+    padding: 40px 20px;
+}
+
+[data-page="calc"] .first, [data-page="calc"] .two {
+    width: 50%;
+    margin: 0 20px;
+}
+
+[data-page="calc"] .title {
+    font-size: 18px;
+    line-height: 150.19%;
+    margin-bottom: 20px;
+}
+
+[data-page="calc"] .two .title {
+    text-align: right;
+}
+
+[data-page="calc"] .form-group {
+    width: 50%;
+    margin: 0 5px;
+}
+
+[data-page="calc"] .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+[data-page="calc"] .form-group span, [data-page="calc"] .form-group input {
+    padding: 20px;
+    background: #F7F9FE;
+    display: block;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 500;
+    width: 100%;
+}
+
+[data-page="calc"] .resolve {
+    display: block;
+    font-size: 15px;
+    margin: 20px 8px;
+    font-weight: 500;
+}
+
+[data-page="calc"] .buttons {
+    margin-top: 20px;
+}
+
+[data-page="calc"] .items {
+    margin: 30px 0;
+}
+
+[data-page="calc"] button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #f7f9fe;
+    margin-bottom: 10px;
+    font: 500 15px Roboto;
+}
+
+[data-page="calc"] button:hover {
+    opacity: 0.7;
+}
