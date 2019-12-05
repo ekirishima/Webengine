@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webengine - Разработка сайтов.</title>
+    <link rel="stylesheet" href="dist/webengine.css">
+</head>
+<body>
+    <div class="header container">
+        <a href="javascript:void(0);" onclick="return webengine.template('main');" class="logotype">Webengine</a>
+        <div class="menu">
+            <a href="javascript:void(0);" onclick="return webengine.template('main');">Заказать проект</a>
+            <a href="javascript:void(0);" onclick="return webengine.template('portfolio');">Портфолио</a>
+            <a href="javascript:void(0);" onclick="return webengine.template('shop');">Магазин</a>
+            <a href="javascript:void(0);" onclick="return webengine.template('calc');">Калькулятор</a>
+        </div>
+        <div class="phone" onclick="window.location = 'tel:+79954481708';">+7 (995) 448 17 08</div>
+    </div>
+    <div id="app" class="container">
+        <div data-page="main" style="display: none;">
+            <div class="title">Мы разрабатываем веб-приложения, <br /> для развития ваших проектов.</div>
+            <div class="description">Разработка одностраничников, интернет-магазинов, корпоративных сайтов и реализация ваших уникальных идей.</div>
+            <div class="buttons">
+                <a href="javascript:void(0);" onclick="return false;" class="btn btn-main">Оставить заказ</a>
+                <a href="javascript:void(0);" onclick="return webengine.template('calc');" class="btn btn-secondary">Калькулятор</a>
+            </div>
+            <div class="right">12</div>
+        </div>
+        <div data-page="portfolio" style="display: none;">
+            <a href="https://github.com/ekirishima/Distribution-Keys-Website" target="_blank"><img src="https://raw.githubusercontent.com/ekirishima/Distribution-Keys-Website/master/images/1.PNG" /></a>    
+            <a href="https://github.com/ekirishima/CMS-Game-Store-Shops" target="_blank"><img src="https://raw.githubusercontent.com/ekirishima/CMS-Game-Store-Shops/master/images/1.PNG" /></a> 
+            <a href="https://github.com/ekirishima/Website-HTML-and-CSS-Teacher-with-Socket.io" target="_blank"><img src="https://github.com/ekirishima/Website-HTML-and-CSS-Teacher-with-Socket.io/raw/master/github.JPG" /></a>        
+            <a href="https://github.com/ekirishima/Website-Monitoring" target="_blank"><img src="https://phoenixnap.com/kb/wp-content/uploads/2019/04/linux-ping-command-tutorial-2.png" /></a>         
+            <a href="https://ezbattle.fun" target="_blank"><img src="https://i.ytimg.com/vi/xj8dbEMEYWA/maxresdefault.jpg" /></a>        
+            <a href="https://ezprofit.fun" target="_blank"><img src="https://ezprofit.fun/img/1.PNG" /></a>    
+            <a href="https://dice2x.fun" target="_blank"><img src="https://i.ytimg.com/vi/wGi-Hsnz6Eo/maxresdefault.jpg" /></a>
+            <a href="https://ezcash.best" target="_blank"><img src="https://i.ytimg.com/vi/VI2HugSO1YE/maxresdefault.jpg" /></a>
+        </div>
+        <div data-page="shop" style="display: none;">
+            <div class="item">
+                <div class="image"><img src="https://raw.githubusercontent.com/ekirishima/CMS-Game-Store-Shops/master/images/1.PNG" /></div>
+                <div class="info">
+                    <div class="title">Движок интернет-магазина</div>
+                    <div class="desc">Разработанный нами в 2018 году движок интернет-магазина продажи цифровых товаров.</div>
+                    <div class="buttons">
+                        <a href="https://github.com/ekirishima/CMS-Game-Store-Shops" class="btn btn-main">Забрать бесплатно</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="image"><img src="https://raw.githubusercontent.com/ekirishima/Distribution-Keys-Website/master/images/1.PNG" /></div>
+                <div class="info">
+                    <div class="title">Givekey</div>
+                    <div class="desc">Сервис раздачи ключей и подарков за выполнение условий.</div>
+                    <div class="buttons">
+                        <a href="https://github.com/ekirishima/Distribution-Keys-Website" class="btn btn-main">Забрать бесплатно</a>
+                    </div>
+                </div>
+            </div>
+            <!--div class="item">
+                    <div class="image"><img src="dist/images.jpg" /></div>
+                <div class="info">
+                    <div class="title">Название скрипта / Проекта</div>
+                    <div class="desc">Тут идет полное описание проекта</div>
+                    <div class="buttons">
+                        <a href="javascript:void(0);" onclick="return false;" class="btn btn-main">Купить</a>
+                        <a href="javascript:void(0);" onclick="return false;" class="btn btn-secondary">Поговорить об скидке.</a>
+                    </div>
+                </div>
+            </div-->
+        </div>
+        <div data-page="calc" style="display: none;">
+            <div class="flex">
+                <div class="first">
+                    <div class="title">Над каждым заказанным проектом <br /> мы работаем 4 часа в день.</div>
+                    <div class="items flex">
+                        <div class="form-group">
+                            <label>Цена за час работы.</label>
+                            <span class="info">450 руб.</span>
+                        </div>
+                        <div class="form-group">
+                            <label>Укажите часы работы.</label>
+                            <input type="text" value="1" onchange="return webengine.update();" onkeypress="return webengine.update();" />
+                        </div>
+                    </div>
+                    <div class="resolve">Примерный расчет</div>
+                    <div class="items flex">
+                        <div class="form-group">
+                            <label>Примерное время ожидания</label>
+                            <span class="info" id="result_time">~ 2 дня.</span>
+                        </div>
+                        <div class="form-group">
+                            <label>Примерная оплата</label>
+                            <span class="info" id="result_price">~ 2000 руб.</span>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <a href="javascript:void(0);" onclick="return false;" class="btn btn-main">Купить</a>
+                        <a href="javascript:void(0);" onclick="return false;" class="btn btn-secondary">Поговорить об скидке.</a>
+                    </div>
+                </div>
+                <div class="two">
+                    <div class="title">Для примерного расчета времени можете выбрать один из вариантов типа заказов.</div>
+                    <button onclick="return webengine.time(15);">Landing Page</button>
+                    <button onclick="return webengine.time(30);">Корпоративный сайт</button>
+                    <button onclick="return webengine.time(30);">Интернет-магазин</button>
+                </div>
+            </div>
+        </div>
+        <div data-page="loading">Подождите...</div>
+    </div>
+    <div class="container footer"><a href="https://focus.kontur.ru/entity?query=319450100018975" target="_blank">ИП Кузяев Павел Александрович</a></div>
+    <script src="dist/webengine.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+</body>
+</html>
